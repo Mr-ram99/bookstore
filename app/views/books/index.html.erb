@@ -1,0 +1,21 @@
+<div>
+  <h1> Books </h1>
+  <table>
+    <tr>
+      <th>id</td>
+      <th>title</td>
+      <th>price</td>
+      <th>year_published</td>
+      <th>author</td>
+    <tr>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.id %></td>
+        <td><%= book.title %></td>
+        <td><%= book.price %></td>
+        <td><%= book.year_published %></td>
+        <td><%= book.author.first_name+" "+book.author.last_name %></td>
+      </tr>
+    <% end %>
+    </table>
+</div>

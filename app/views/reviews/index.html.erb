@@ -1,0 +1,21 @@
+<div>
+  <h1> Customers </h1>
+  <table>
+    <tr>
+      <th>first_name</th>
+      <th>last_name</th>
+      <th>email</th>
+      <th>visits</th>
+      <th>order_count</th>
+    <tr>
+    <% @customers.each do |c| %>
+      <tr>
+        <td><%= c.first_name %></td>
+        <td><%= c.last_name %></td>
+        <td><%= c.email %></td>
+        <td><%= c.visits %></td>
+         <td><%= c.order_count %></td>
+      </tr>
+    <% end %>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+<div>
+  <h1> Orders </h1>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>date_submitted</th>
+      <th>status</th>
+      <th>subtotal</th>
+      <th>shipping</th>
+      <th>tax</th>
+      <th>total</th>
+      <th>customer_id</th>
+    <tr>
+    <% @orders.each do |o| %>
+      <tr>
+        <td><%= o.id %></td>
+        <td><%= o.date_submitted %></td>
+        <td><%= o.status %></td>
+        <td><%= o.subtotal %></td>
+        <td><%= o.shipping %></td>
+        <td><%= o.tax %></td>
+        <td><%= o.total %></td>
+        <td><%= o.customer_id %></td>
+      </tr>
+    <% end %>
+    </table>
+</div>
